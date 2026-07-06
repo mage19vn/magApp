@@ -1,0 +1,21 @@
+{
+  "name": "Mage__08 Software Center",
+  "short_name": "MageApp",
+  "description": "Personal Software Center of Mage__08",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#0f172a",
+  "icons": [
+    {
+      "src": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0iIzNiODJmNiIgZD0iTTEyIDBMMSA0djEwYzAgNS41NSAzLjg0IDEwLjc0IDExIDEyIDcuMTYtMS4yNiAxMS02LjQ1IDExLTEyVjRMMTIgMHptMCAyLjI1bDkgMy4yNXY4LjVjMCA0LjQ0LTIuOTEgOC41Ni05IDkuNzQtNi4wOS0xLjE4LTktNS4zLTktOS43NHYtOC41bDktMy4yNXoiLz48L3N2Zz4=",
+      "sizes": "192x192",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0iIzNiODJmNiIgZD0iTTEyIDBMMSA0djEwYzAgNS41NSAzLjg0IDEwLjc0IDExIDEyIDcuMTYtMS4yNiAxMS02LjQ1IDExLTEyVjRMMTIgMHptMCAyLjI1bDkgMy4yNXY4LjVjMCA0LjQ0LTIuOTEgOC41Ni05IDkuNzQtNi4wOS0xLjE4LTktNS4zLTktOS43NHYtOC41bDktMy4yNXoiLz48L3N2Zz4=",
+      "sizes": "512x512",
+      "type": "image/svg+xml"
+    }
+  ]
+}

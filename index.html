@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mage__08 | Software Center</title>
+    <meta name="description" content="Personal Software Center of Mage__08. A collection of desktop applications, web projects and robot simulation tools.">
+    
+    <!-- SEO & Social Media Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mage19vn.github.io/magApp/">
+    <meta property="og:title" content="Mage__08 | Software Center">
+    <meta property="og:description" content="Personal Software Center of Mage__08. A collection of desktop applications, web projects and robot simulation tools.">
+    <meta property="og:image" content="assets/bg.jpg">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://mage19vn.github.io/magApp/">
+    <meta property="twitter:title" content="Mage__08 | Software Center">
+    <meta property="twitter:description" content="Personal Software Center of Mage__08. A collection of desktop applications, web projects and robot simulation tools.">
+    <meta property="twitter:image" content="assets/bg.jpg">
+
+    <!-- PWA & Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#0f172a">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@400;500;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Background Effects -->
+    <div class="bg-effects">
+        <div class="aurora aurora-1"></div>
+        <div class="aurora aurora-2"></div>
+        <div class="aurora aurora-3"></div>
+        <div class="grid-bg"></div>
+        <div id="particles"></div>
+        <div class="mouse-glow"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="header glass sticky" id="header">
+        <div class="container header-container">
+            <div class="logo-area">
+                <a href="#" class="logo-link">
+                    <div class="logo-icon"><i class="fa-solid fa-code"></i></div>
+                    <div class="logo-text">
+                        <h1>Mage__08</h1>
+                        <span class="subtitle">Developer • Tools • Robot Simulation</span>
+                    </div>
+                </a>
+            </div>
+            
+            <button class="mobile-menu-btn" aria-label="Toggle Menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <nav class="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#apps" class="nav-link">Applications</a></li>
+                    <li><a href="#web" class="nav-link">Web Projects</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#github" class="nav-link">Github</a></li>
+                </ul>
+                
+                <div class="nav-actions">
+                    <button id="searchBtn" class="icon-btn" aria-label="Search (Ctrl+K)">
+                        <i class="fa-solid fa-search"></i>
+                        <span class="shortcut">Ctrl+K</span>
+                    </button>
+                    <div class="theme-dropdown-wrapper">
+                        <button id="themeToggleBtn" class="icon-btn" aria-label="Toggle Theme">
+                            <i class="fa-solid fa-palette"></i>
+                        </button>
+                        <div class="theme-dropdown glass">
+                            <button class="theme-option" data-set-theme="dark"><i class="fa-solid fa-moon"></i> Dark</button>
+                            <button class="theme-option" data-set-theme="amoled"><i class="fa-solid fa-mobile-screen"></i> AMOLED</button>
+                            <button class="theme-option" data-set-theme="light"><i class="fa-solid fa-sun"></i> Light</button>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero section-padding">
+            <div class="container hero-container">
+                <div class="hero-content fade-in-up">
+                    <h2 class="hero-title glitch" data-text="Mage__08">Mage__08</h2>
+                    <h3 class="hero-subtitle">Personal Software Center</h3>
+                    <p class="hero-desc">A collection of desktop applications, web projects and robot simulation tools.</p>
+                    <div class="hero-btns">
+                        <a href="#apps" class="btn btn-primary ripple">Explore <i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="https://github.com/mage19vn" target="_blank" class="btn btn-outline ripple">Github <i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="hero-image floating">
+                    <div class="cyber-circle">
+                        <i class="fa-solid fa-cubes cyber-icon"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Search Bar -->
+        <div class="container">
+            <div class="search-bar glass fade-in-up">
+                <i class="fa-solid fa-search"></i>
+                <input type="text" id="mainSearch" placeholder="Search applications, projects... (Ctrl+K)" aria-label="Search">
+            </div>
+        </div>
+
+        <!-- Applications Section -->
+        <section id="apps" class="section-padding">
+            <div class="container">
+                <h2 class="section-title">Desktop Applications</h2>
+                <div class="grid-cards" id="appsContainer">
+                    <!-- Cards will be populated by JS -->
+                    <div class="skeleton-card glass"></div>
+                    <div class="skeleton-card glass"></div>
+                    <div class="skeleton-card glass"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Web Projects Section -->
+        <section id="web" class="section-padding">
+            <div class="container">
+                <h2 class="section-title">Web Projects</h2>
+                <div class="grid-cards" id="webContainer">
+                    <!-- Web Projects -->
+                    <div class="card glass web-card" data-name="blockly robosim robot simulation">
+                        <div class="card-header">
+                            <div class="card-icon"><i class="fa-solid fa-robot"></i></div>
+                            <h3 class="card-title">Blockly RoboSim</h3>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-desc">Robot Simulation using Blockly</p>
+                        </div>
+                        <div class="card-footer">
+                            <a href="https://mage19vn.github.io/BlocklyRbSim/" target="_blank" class="btn btn-primary btn-sm ripple w-100">Open <i class="fa-solid fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="card glass web-card" data-name="pvt robot coding programming simulation">
+                        <div class="card-header">
+                            <div class="card-icon"><i class="fa-solid fa-code-branch"></i></div>
+                            <h3 class="card-title">PVT Robot Coding</h3>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-desc">Programming Robot Simulation</p>
+                        </div>
+                        <div class="card-footer">
+                            <a href="https://pvtrobotcoding.netlify.app/" target="_blank" class="btn btn-primary btn-sm ripple w-100">Open <i class="fa-solid fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- GitHub Section -->
+        <section id="github" class="section-padding">
+            <div class="container">
+                <h2 class="section-title">GitHub Profile</h2>
+                <div class="github-profile glass" id="githubProfile">
+                    <div class="skeleton-profile"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section-padding">
+            <div class="container">
+                <div class="about-container glass">
+                    <div class="about-avatar">
+                        <img src="https://avatars.githubusercontent.com/u/74635639?v=4" alt="Mage__08" id="aboutAvatar" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTEyIDBDNS4zNyAwIDAgNS4zNyAwIDEyczUuMzcgMTIgMTIgMTIgMTItNS4zNyAxMi0xMlMxOC42MyAw 12IDB6bTAgMTRjLTIuMjEgMC00LTEuNzktNC00czEuNzktNCA0LTQgNCAxLjc5IDQgNCAxLjc5IDQgNCA0em0tNiA2Yy0xLjQxIDAtMi43MS0uMzgtMy44NC0xLjA0QzMuNDkgMTcuMzUgNi43MyAxNiA1IDE2YzMuMjcgMCA2LjQ5IDEuMzUgOC44NCAyLjk2QzEyLjcxIDE5LjYyIDExLjQxIDIwIDEwIDIweiIvPjwvc3ZnPg=='">
+                    </div>
+                    <div class="about-info">
+                        <h2 class="about-title">Mage__08</h2>
+                        <p class="about-desc">Independent Developer creating desktop applications, robot simulators and educational software.</p>
+                        <div class="about-stats" id="aboutStats">
+                            <!-- Populated by JS -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer glass" id="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <p>&copy; 2026 Mage__08</p>
+                    <p class="footer-tech">Built with HTML • CSS • JavaScript</p>
+                </div>
+                <div class="footer-right">
+                    <a href="https://github.com/mage19vn" target="_blank" class="social-link" aria-label="Github"><i class="fa-brands fa-github"></i> Github</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Command Palette Modal -->
+    <div class="modal" id="cmdPalette" aria-hidden="true">
+        <div class="modal-backdrop"></div>
+        <div class="cmd-palette glass">
+            <div class="cmd-header">
+                <i class="fa-solid fa-terminal"></i>
+                <input type="text" id="cmdInput" placeholder="Type a command or search..." autocomplete="off">
+                <button class="close-btn" aria-label="Close">ESC</button>
+            </div>
+            <div class="cmd-body">
+                <ul class="cmd-list" id="cmdList">
+                    <!-- Populated dynamically -->
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Easter Egg Modal -->
+    <div class="modal dev-modal" id="easterEggModal" aria-hidden="true">
+        <div class="modal-backdrop"></div>
+        <div class="dev-card cyber-border">
+            <button class="close-dev-btn"><i class="fa-solid fa-times"></i></button>
+            <div class="glitch-wrapper">
+                <h2 class="glitch-text" data-text="Developer Mode">Developer Mode</h2>
+            </div>
+            <p class="success-text">🎉 Easter Egg Unlocked!</p>
+            <div class="dev-info" id="devInfo">
+                <div class="dev-row"><span>Secret Key:</span> <span class="neon-text">120408</span></div>
+                <div class="dev-row"><span>Author:</span> <span>Mage__08</span></div>
+                <div class="dev-row"><span>Browser:</span> <span id="devBrowser"></span></div>
+                <div class="dev-row"><span>Resolution:</span> <span id="devRes"></span></div>
+                <div class="dev-row"><span>Current Theme:</span> <span id="devTheme"></span></div>
+                <div class="dev-row"><span>API Status:</span> <span id="devApi">OK</span></div>
+                <div class="dev-row"><span>Version:</span> <span>1.0.0</span></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast-container"></div>
+
+    <!-- Back to top -->
+    <button id="backToTop" class="back-to-top glass ripple" aria-label="Back to Top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <script src="app.js"></script>
+</body>
+</html>
