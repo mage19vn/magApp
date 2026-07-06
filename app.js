@@ -58,13 +58,20 @@ document.addEventListener('DOMContentLoaded', () => {
     // === Event Listeners Setup ===
     function setupEventListeners() {
         // Scroll events
+        let scrollTicking = false;
         window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                header.classList.add('scrolled');
-                backToTopBtn.classList.add('visible');
-            } else {
-                header.classList.remove('scrolled');
-                backToTopBtn.classList.remove('visible');
+            if (!scrollTicking) {
+                window.requestAnimationFrame(() => {
+                    if (window.scrollY > 50) {
+                        header.classList.add('scrolled');
+                        backToTopBtn.classList.add('visible');
+                    } else {
+                        header.classList.remove('scrolled');
+                        backToTopBtn.classList.remove('visible');
+                    }
+                    scrollTicking = false;
+                });
+                scrollTicking = true;
             }
         });
 
@@ -136,11 +143,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Mouse glow effect
         const mouseGlow = document.querySelector('.mouse-glow');
+        let glowTicking = false;
+        
         document.addEventListener('mousemove', (e) => {
-            mouseGlow.style.left = e.clientX + 'px';
-            mouseGlow.style.top = e.clientY + 'px';
-            mouseGlow.style.opacity = 1;
-        });
+            if (!glowTicking) {
+                window.requestAnimationFrame(() => {
+                    mouseGlow.style.setProperty('--mouse-x', `${e.clientX}px`);
+                    mouseGlow.style.setProperty('--mouse-y', `${e.clientY}px`);
+                    mouseGlow.style.opacity = 1;
+                    glowTicking = false;
+                });
+                glowTicking = true;
+            }
+        }, { passive: true });
+        
         document.addEventListener('mouseleave', () => {
             mouseGlow.style.opacity = 0;
         });
@@ -457,7 +473,7 @@ document.addEventListener('DOMContentLoaded', () => {
         circle.style.borderRadius = '50%';
         circle.style.backgroundColor = 'rgba(255,255,255,0.4)';
         circle.style.transform = 'scale(0)';
-        circle.style.animation = 'ripple 0.6s linear';
+        circle.style.animation = 'ripple 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards';
         circle.style.pointerEvents = 'none';
 
         const existingRipple = target.querySelector('.ripple-effect');
