@@ -36,6 +36,20 @@
     --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
 }
 
+[data-theme="nhathy"] {
+    --bg-base: #fff0f5;
+    --bg-surface: rgba(255, 240, 245, 0.85);
+    --text-primary: #5c3a4d;
+    --text-secondary: #9e758a;
+    --primary: #ff8eaf;
+    --primary-glow: rgba(255, 142, 175, 0.6);
+    --secondary: #ffb6c1;
+    --secondary-glow: rgba(255, 182, 193, 0.6);
+    --glass-bg: rgba(255, 255, 255, 0.7);
+    --glass-border: rgba(255, 192, 203, 0.5);
+    --glass-shadow: 0 8px 32px 0 rgba(255, 182, 193, 0.25);
+}
+
 * {
     margin: 0;
     padding: 0;
