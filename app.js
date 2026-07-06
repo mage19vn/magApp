@@ -141,25 +141,7 @@ document.addEventListener('DOMContentLoaded', () => {
             easterEggModal.classList.remove('active');
         });
 
-        // Mouse glow effect
-        const mouseGlow = document.querySelector('.mouse-glow');
-        let glowTicking = false;
-        
-        document.addEventListener('mousemove', (e) => {
-            if (!glowTicking) {
-                window.requestAnimationFrame(() => {
-                    mouseGlow.style.setProperty('--mouse-x', `${e.clientX}px`);
-                    mouseGlow.style.setProperty('--mouse-y', `${e.clientY}px`);
-                    mouseGlow.style.opacity = 1;
-                    glowTicking = false;
-                });
-                glowTicking = true;
-            }
-        }, { passive: true });
-        
-        document.addEventListener('mouseleave', () => {
-            mouseGlow.style.opacity = 0;
-        });
+        // Mouse glow effect removed for performance
     }
 
     // === Theme Management ===
