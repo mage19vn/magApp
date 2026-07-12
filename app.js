@@ -8,13 +8,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const apps = [
         { id: 'resize', repo: 'mage19vn/resizeVideo', name: 'Resize Video Utility', desc: 'Resize Video Utility', icon: 'fa-video' },
         { id: 'magdown', repo: 'mage19vn/magDown', name: 'magDown', desc: 'Video Downloader', icon: 'fa-download' },
-        { id: 'magconvert', repo: 'mage19vn/magConvertFile', name: 'magConvertFile', desc: 'File Converter', icon: 'fa-file-export' }
+        { id: 'magconvert', repo: 'mage19vn/magConvertFile', name: 'magConvertFile', desc: 'File Converter', icon: 'fa-file-export' },
+        { id: 'magautotone', repo: 'mage19vn/magAutoTone', name: 'magAutoTone', desc: 'Auto Tone Utility', icon: 'fa-music' }
     ];
 
     const commands = [
         { name: 'Resize Video Utility', icon: 'fa-video', action: () => scrollToSection('apps') },
         { name: 'magDown', icon: 'fa-download', action: () => scrollToSection('apps') },
         { name: 'magConvertFile', icon: 'fa-file-export', action: () => scrollToSection('apps') },
+        { name: 'magAutoTone', icon: 'fa-music', action: () => scrollToSection('apps') },
         { name: 'Blockly RoboSim', icon: 'fa-robot', action: () => window.open('https://mage19vn.github.io/BlocklyRbSim/', '_blank') },
         { name: 'PVT Robot Coding', icon: 'fa-code-branch', action: () => window.open('https://pvtrobotcoding.netlify.app/', '_blank') },
         { name: 'Github Profile', icon: 'fa-github', action: () => scrollToSection('github') },
